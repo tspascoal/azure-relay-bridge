@@ -56,10 +56,10 @@ jobs:
         name: XBuild
         path: artifacts/build/net6.0
 
-    - name: Integration
-      env:
-         AZBRIDGE_TEST_CXNSTRING: ${{ secrets.AZBRIDGE_TEST_CXNSTRING }}
-      run: bash ./verify-build.sh
+#    - name: Integration
+#      env:
+#         AZBRIDGE_TEST_CXNSTRING: ${{ secrets.AZBRIDGE_TEST_CXNSTRING }}
+#      run: bash ./verify-build.sh
       
     # create a release if a tag has been pushed
     - uses: ncipollo/release-action@v1
